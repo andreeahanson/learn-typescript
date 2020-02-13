@@ -65,5 +65,7 @@
   }, 
 "exclude": [ //array of files which shouldn't be included when the tsc or tsc -w command is run
   "analytics.ts"
+  // or you could do "*.dev.ts" which eliminates any file that includes dev.ts
+  // or you could do "**/*.dev.ts" which eliminates any file IN ANY FOLDER that includes dev.ts
 ]
 }
