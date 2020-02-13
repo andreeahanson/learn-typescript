@@ -1,21 +1,12 @@
-// unknown types
+// compiler settings, so that we don't need the tsc app.ts command to refresh the page
 
-let userInput: unknown; //can store any value without getting errors, but it's stricter than 'type any'
-let userName: string;
+const userName = 'Maximilian';
 
-userInput = 5;
-userInput = 'Max';
-// userName = userInput; // it doesn't work
+console.log(userName)
 
-if(typeof userInput === 'string') {
-  userName = userInput;
-}
+// in the command line: tsc app.ts --watch or tsc app.ts -w
+// => Watch mode
+
+//downside: specifically have to target the app.ts file
 
 
-// never type = never produces a return value
-
-function generateError(message: string, code: number) : never {
-  throw { message: message, errorCode: code };
-}
-
-generateError('An error occured', 500)
